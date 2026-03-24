@@ -1,0 +1,38 @@
+Step 1: Start Minikube properly
+
+Open CMD and run:
+
+minikube start
+🔹 Step 2: Wait until you see
+Done! kubectl is now configured...
+🔹 Step 3: Check status
+minikube status
+
+👉 Expected:
+
+host: Running
+kubelet: Running
+apiserver: Running
+🔹 Step 4: Now try again
+kubectl get nodes
+
+
+=============================================
+
+Step 7.4: Apply to Kubernetes
+
+Run:
+
+kubectl apply -f k8s/deployment.yaml
+kubectl apply -f k8s/service.yaml
+🧪 Step 7.5: Check status
+kubectl get pods
+kubectl get svc
+
+👉 Pods should show:
+
+Running
+🌐 Step 7.6: Open your app
+minikube service node-service
+
+👉 Browser will open automatically 🎉
